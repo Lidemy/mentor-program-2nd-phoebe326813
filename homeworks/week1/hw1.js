@@ -5,3 +5,20 @@ function printStars(n) {
  	}
  } 
 }
+
+printStars(1)
+// 正確輸出：
+// *
+printStars(3)
+// 正確輸出：
+// *
+// *
+// *
+printStars(6)
+// 正確輸出：
+// *
+// *
+// *
+// *
+// *
+// *
