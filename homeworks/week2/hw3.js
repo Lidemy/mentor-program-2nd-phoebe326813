@@ -4,11 +4,9 @@ function isPrime(n) {
  	for (var i=2; i<=Math.ceil(n/2); i++){
  		if (n % i === 0){
  			return false
- 			break
- 		} else{
- 			return true
  		}
  	}
+ 	return true
 }
 
 module.exports = isPrime
