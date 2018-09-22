@@ -1,0 +1,168 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style type:"text/css">
+			html, body {
+				margin: 0px;
+				padding: 0px;
+			}
+
+			.navbar {
+				position: fixed;
+				display: inline-flex;
+				justify-content: flex-start;
+				align-items: center;
+				width: 100%;
+				height: 50px;
+				background: #343a40;
+				color: white;
+				padding: 0px 10px;
+			}
+			.navbar__logo {
+				font-size: 20px;
+			}
+			.navbar ul {
+				display: inline-flex;
+				list-style: none;
+				padding: 0;
+			}
+			.navbar ul li {
+				color: grey;
+				margin-left: 20px;
+			}
+			.navbar ul li:first-child {
+				margin-left: 25px;
+			}
+			.navbar ul li:hover {
+				cursor: pointer;
+				color: white;
+			}
+
+			.jumbotron {
+				padding: 90px 0px 40px 0px;
+				background: #e9ecef;
+				display: flex;
+				justify-content: center;
+			}
+			.jumbotron__block {
+				display: inline-flex;
+				flex-direction: column;
+				width: 960px;
+				margin: 0px 20px 0px 20px;
+			}
+			.jumbotron__title {
+				font-size: 72px;
+			}
+			.jumbotron__content {
+				font-size: 16px;
+				padding: 10px 0px;
+			}
+			.jumbotron__button {
+				font-size: 20px;
+				border-radius: 4px;
+				background: rgb(0, 123, 255);
+				width: 139px;
+				padding: 15px 19px;
+				color: white;
+			}
+			.jumbotron__button:hover {
+				cursor: pointer;
+				background: #0069d9;
+			}
+
+			.supporting {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+			}
+			.supporting__blocks {
+				margin: 50px 45px 50px 20px;
+				display: inline-flex;
+				max-width: 935px;
+			}
+			.supporting__block {
+				margin: 0px 5px 0px 0px;
+			}
+			
+			.supporting__title {
+				font-size: 32px;
+			}
+			.supporting__content {
+				font-size: 16px;
+				margin: 10px 0px;
+			}
+			.supporting__button {
+				font-size: 16px;
+				background: rgb(108, 117, 125);
+				color: white;
+				border-radius: 4px;
+				width: 115px;
+				padding: 12px 10px;
+			}
+			.supporting__button:hover {
+				cursor: pointer;
+				background: #5a6268;
+			}
+			.supporting__footer {
+				font-size: 16px;
+				margin: 0px 25px 0px 0px;
+				width: 935px;
+				border-top: 1px solid rgba(0, 0, 0, 0.1);
+				padding-top: 20px;
+			}
+
+
+			@media screen and (max-width: 747px) {
+				.supporting__block {
+    				width: 100%;
+
+    			}
+    			.supporting__blocks {
+					flex-direction: column;
+					margin: 50px 20px 50px 20px;
+				}
+				.supporting__block ~ .supporting__block {
+					margin-top: 20px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar__logo">Navbar</div>
+			<ul >
+				<li>Home</li>
+				<li>Link</li>
+			</ul>
+		</div>
+		<div class="jumbotron">
+			<div class="jumbotron__block">
+				<div class="jumbotron__title">Hello, world!</div>
+				<div class="jumbotron__content">This is a template for a simple marketing or informational website. It includes a large callout called a 	jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</div>
+				<div class="jumbotron__button">Learn more >></div>
+			</div>
+		</div>
+		<div class="supporting">
+			<div class="supporting__blocks">
+				<div class="supporting__block">
+					<div class="supporting__title">Heading</div>
+					<div class="supporting__content">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</div>
+					<div class="supporting__button">View details >></div>
+				</div>
+				<div class="supporting__block">
+					<div class="supporting__title">Heading</div>
+					<div class="supporting__content">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</div>
+					<div class="supporting__button">View details >></div>
+				</div>
+				<div class="supporting__block">
+					<div class="supporting__title">Heading</div>
+					<div class="supporting__content">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</div>
+					<div class="supporting__button">View details >></div>
+				</div>
+			</div>
+			<div class="supporting__footer">© Company 2017-2018</div>
+		</div>
+	</body>
+</html>
