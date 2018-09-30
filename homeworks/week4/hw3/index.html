@@ -1,0 +1,183 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style type:"text/css">
+			html, body {
+				margin: 0px;
+				padding: 0px;
+			}
+			.banner {
+				background: url(https://static-cdn.jtvnw.net/community-images/6a723096-3135-4972-a296-ecd3b08be1ad/665214ca-8b0e-4362-b155-c5988586fb87-1200x180.png) no-repeat;
+				background-size: contain;
+				height: 200px;
+				width: 100%;
+				display: inline-flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: flex-end;
+
+			}
+			.backgroundcover {
+				position: absolute;
+				height: 200px;
+				width: 100%;
+				top:0;
+				background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2), white);
+				background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2), white);
+				background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.2), white);
+				background-image: linear-gradient(top, rgba(255, 255, 255, 0.2), white);		
+			}
+			.banner__title {
+				font-size: 65px;
+				z-index: 3
+			}
+			.banner__description {
+				font-size: 20px;
+				margin-bottom: 5px;
+				z-index: 3
+			}
+			.live {
+				display: inline-flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+			}
+			.live__screen {
+				margin-top: 20px;
+				margin-bottom: 12px;
+				height: 180px;
+				width: 320px;
+				position: relative;
+				cursor: pointer;
+			}
+			.live__livelogobackground {
+				position: absolute;
+				background: rgba(0, 0, 0, 0.5);
+				height: 20px;
+				width: 60px;
+				top: 10px;
+				left: 10px;
+			}
+			.live__livelogocircle {
+				height: 10px;
+				width: 10px;
+				background: red;
+				border-radius: 50px;
+				position: absolute;
+				top: 15px;
+				left: 17px;
+			}
+			.live__livelogoword {
+				font-size: 13px;
+				position: absolute;
+				top: 11px;
+				left: 38px;
+				color: white;
+			}
+			.live__viwersbackground {
+				width: 320px;
+				height: 50px;
+				bottom: 0px;
+				left: 0px;
+				position: absolute;
+				background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+				background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+				background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+				background-image: linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));			
+			}
+			.live__viwers {
+				font-size: 13px;
+				position: absolute;
+				bottom: 10px;
+				left: 10px;
+				color: white;
+			}
+			.live__bottom {
+				width: 320px;
+				display: inline-flex;
+			}
+			.live__logo {
+				margin-right: 12px;
+				cursor: pointer;
+			}
+			.live__right {
+				display: inline-flex;
+				flex-direction: column;
+			}
+			.live__status {
+				font-weight: bold;
+				font-size: 15px;
+				width: 258px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				cursor: pointer;
+			}
+			.live__name {
+				font-size: 12px;
+				width: 258px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				cursor: pointer;
+			}
+			.live__language {
+				font-size: 12px;
+				border: 1px solid gray;
+				padding: 2px 5px;
+				width: 17px;
+				text-align: center;
+				margin-top: 5px;
+				cursor: pointer;
+			}
+
+		</style>
+		<script type="text/javascript">
+
+			document.addEventListener("DOMContentLoaded", function(){
+				let request = new XMLHttpRequest();
+				request.open("GET", "https://api.twitch.tv/kraken/streams/?client_id=03b286ityc8c6ai48kwwuq9cefuzhv&game=League%20of%20Legends&limit=20", true)
+				request.onload = function() {
+					if (request.status>=200 && request.status< 400) {
+						let resp = JSON.parse(request.responseText)
+						for (i=0; i<resp.streams.length; i++){
+							let NewLiveStream = document.createElement("div")
+							NewLiveStream.className = 'live__block';
+			                NewLiveStream.innerHTML = `
+			                <div class="live__screen"><a href="${resp.streams[i].channel.url}" target="_blank"><img src="${resp.streams[i].preview.medium}"></a>
+								<div class="live__livelogo">
+									<div class="live__livelogobackground"></div>
+									<div class="live__livelogocircle"></div>
+									<div class="live__livelogoword">實況</div>
+								</div>
+								<div class="live__viwersbackground"></div>
+								<div class="live__viwers">${resp.streams[i].viewers} 位觀眾</div>
+							</div>
+							<div class="live__bottom">
+								<div class="live__logo"><a href="${resp.streams[i].channel.url}/videos/all" target="_blank"><img src="${resp.streams[i].channel.logo}" style="width:50px" /></div>
+								<div class="live__right">
+									<div class="live__status"><a href="${resp.streams[i].channel.url}" target="_blank">${resp.streams[i].channel.status}</a></div>
+									<div class="live__name"><a href="${resp.streams[i].channel.url}/videos/all" target="_blank">${resp.streams[i].channel.display_name}</a></div>
+									<div class="live__language"><a href="https://www.twitch.tv/directory/game/League%20of%20Legends" target="_blank">${resp.streams[i].channel.language}</a></div>
+								</div>
+							</div>
+			                `
+			                document.querySelector(".live").appendChild(NewLiveStream)
+						}
+					}
+				};
+				request.send();
+	        })
+		</script>
+	</head>
+	<body>
+		<div class="banner">
+			<div class="banner__title">League of Legends</div>
+			<div class="banner__description">Watch Live Game Streaming on the <a href="https://www.twitch.tv/directory/game/League%20of%20Legends" target="_blank">Twitch</a></div>
+		</div>
+		<div class="backgroundcover"></div>
+		<div class="live">
+		</div>
+	</body>
+</html>

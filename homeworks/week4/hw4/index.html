@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style type:"text/css">
+			.title {
+				width: 300px;
+				height: 100px;
+				border: 2px solid red;
+				font-size: 30px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="title">測試</div>
+	</body>
+	<script type="text/javascript">			
+		function q(n){
+			let value = document.querySelector(n)
+			let obj = {
+				hide: () => value.style.display = 'none',
+				show: () => value.style.display = ''
+			}
+			return obj
+		}
+
+		var element = q('.title')
+		element.hide()
+		// element.show()
+	</script>
+</html>
