@@ -1,0 +1,280 @@
+* {
+	font-family: 'Hind Vadodara', sans-serif, "微軟正黑體", Microsoft JhengHei
+}
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background: #ccc;
+}
+a {
+	text-decoration: none;
+	color: #3c3939;
+}
+nav {
+	width: 100%;
+	height: 55px;
+	background: #fbfbfb;
+	position: fixed;
+	display: inline-flex;
+	align-items: center;
+	z-index: 10;
+}
+.nav__home {
+	width:60px;
+	padding: 8px;
+	margin-left: 20px;
+	font-size: 18px;
+}
+.nav__home:hover {
+	background: #CCC;
+}
+.nav__login {
+	margin-right: 20px;
+	display: inline-flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	font-size: 18px;
+}
+.nav__form {
+	background: #CCC;
+	padding: 1px 6px 4px 6px;
+}
+.nav__submit {
+	cursor: pointer;
+	background: #CCC;
+	border: 1px solid #CCC;
+	color: #3c3939;
+	font-size: 13px;
+}
+.nav__submit:hover {
+	background: white;
+	border: 1px solid white;
+}
+.nav__signup {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: 15px;
+	margin-right: 10px;
+	color: #3c3939;
+}
+.nav__signupword {
+	font-size: 10px;
+}
+.nav__welcomeword {
+	font-size: 13px;
+	margin-right: 10px;
+}
+.nav__signuplink {
+	font-size: 13px;
+	background: #CCC;
+	padding: 2px 8px;
+	border: 4px solid #CCC;
+}
+.nav__signuplink:hover {
+	background: white;
+}
+.nav__changeinfo {
+	font-size: 13px;
+	background: #CCC;
+	padding: 3px 8px;
+	border: 4px solid #CCC;
+	margin-right: 10px;
+}
+.nav__changeinfo:hover {
+	background: white;
+}
+
+.signup {
+	position: relative;
+	width: 100%;
+	margin-top: 55px;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+}
+.signup__block {
+	width: 300px;
+	background: #fbfbfb;
+	margin-top: 50px;
+	padding: 20px;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+}
+.signup__title {
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.signup__form {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 135px;
+}
+.signup__submit {
+	margin-top: 5px;
+	font-size: 13px;
+	background: #CCC;
+	padding: 2px 8px;
+	border: 4px solid #CCC;
+	cursor: pointer;
+}
+.signup__submit:hover {
+	background: white;
+}
+.changeinfo {
+	position: relative;
+	width: 100%;
+	margin-top: 55px;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+}
+.changeinfo__block {
+	width: 300px;
+	background: #fbfbfb;
+	margin-top: 50px;
+	padding: 20px;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+}
+.changeinfo__title {
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.changeinfo__form {
+	font-size: 14px;
+	height: 40px;
+}
+.changeinfo__submit {
+	margin-top: 5px;
+	font-size: 13px;
+	background: #CCC;
+	padding: 1px 8px;
+	border: 2px solid #CCC;
+	cursor: pointer;
+}
+.changeinfo__submit:hover {
+	background: white;
+}
+.error {
+	color: red;
+	font-size: 13px;
+	text-align: center;
+}
+.posts {
+	position: relative;
+	width: 100%;
+	margin-top: 55px;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	color: #3c3939;
+}
+.posts__all {
+	width: 550px;
+	padding: 15px;
+	background: #fbfbfb;
+}
+.posts__title {
+	font-size: 20px;
+	color: #b90c0c;
+	margin-bottom: 10px;
+}
+.posts__up {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+.posts__nickname {
+	font-size: 17px;
+	font-weight: bold;
+}
+.posts__time {
+	font-size: 13px;
+}
+.posts__form {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.posts__post {
+	width: 540px;
+	border: 1px solid #CCC;
+	font-size: 15px;
+	padding: 5px;
+}
+.posts__textarea {
+	width: 545px;
+	height: 100px;
+	font-size: 15px;
+}
+.posts__submit {
+	cursor: pointer;
+	background: #CCC;
+	padding: 2px 8px;
+	border: 3px solid #CCC;
+	width: 70px;
+	margin-top: 5px;
+	right: 0px;
+}
+.posts__submit:hover {
+	color: #b90c0c;
+}
+.posts__bottom {
+	width: 450px;
+	display: inline-flex;
+	flex-direction: column;
+	margin-left: 100px;
+	margin-top: 5px;
+}
+.posts__comment {
+	border-bottom: 1px solid #CCC;
+	font-size: 15px;
+	margin-top: 5px;
+}
+.posts__commentarea {
+	width: 443px;
+	height: 20px;
+}
+.posts__newcomment {
+	display: inline-flex;
+	flex-direction: column;
+	font-size: 15px;
+	margin-top: 5px;
+	align-items: flex-end;
+}
+.posts__commentup {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.posts__commentnickname {
+	font-size: 15px;
+	font-weight: bold;
+}
+.posts__commenttitle {
+	font-size: 15px;
+	font-weight: bold;
+	color: #b90c0c;
+}
+.posts__commenttime {
+	font-size: 13px;
+}
+.pagesblock {
+	width: 100%;
+	display: inline-flex;
+	justify-content: center;
+}
+.pages {
+	list-style: none;
+	margin: 55px 3px 55px 3px;
+}
