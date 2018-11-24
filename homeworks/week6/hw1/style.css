@@ -11,6 +11,7 @@ html, body {
 	margin-bottom: 40px;
 }
 a {
+	text-decoration: none;
 	cursor: pointer;
 	padding: 5px 5px;
 	margin-right: 10px;
@@ -38,6 +39,11 @@ a {
 	margin-top: 30px;
 	padding: 10px;
 }
+.posts__postcolor {
+	border: 1px #ca7818 solid;
+	margin-top: 30px;
+	padding: 10px;
+}
 .posts__header {
 	border-bottom: 1px gray solid;
 	padding-bottom: 5px;
@@ -47,10 +53,48 @@ a {
 	width: 573px;
 	font-size: 17px;
 }
+.posts__contentblock {
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-between;
+}
 .posts__content {
 	font-size: 15px;
 }
+.posts__change {
+	display: inline-flex;
+	align-items: flex-end;
+}
+.posts__change .newpost__form-submit{
+	width: 40px;
+	padding: 5px 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+.sub_formedit {
+	cursor: pointer;
+	background: #eca34c;
+	border: none;
+	width: 40px;
+	height: 28px;
+	margin-left: 488px;
+}
+.sub_formdelete {
+	cursor: pointer;
+	background: #eca34c;
+	border: none;
+	width: 40px;
+	height: 28px;
+	margin-right: 30px;
+	margin-left: 10px;
+}
 .posts_comments .posts__post {
+	margin-top: 10px;
+	margin-left: 30px;
+	border: none;
+}
+.posts_comments .posts__postcolor {
 	margin-top: 10px;
 	margin-left: 30px;
 	border: none;
@@ -72,9 +116,6 @@ a {
 .posts_comments .newpost__form-content {
 	width: 523px;
 	height: 100px;
-}
-.posts_comments .newpost__form-submit {
-	padding: 3px 22px;
 }
 .registerboard {
 	width: 240px;
